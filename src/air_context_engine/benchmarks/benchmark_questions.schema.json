@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://air-context-engine.dev/schemas/benchmark-questions-v1.json",
+  "title": "Air Context Engine benchmark questions",
+  "description": "A versioned set of questions used by the LLM A/B benchmark.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "category", "question", "reference_answer"],
+    "properties": {
+      "id": {
+        "oneOf": [
+          {"type": "integer", "minimum": 1},
+          {"type": "string", "minLength": 1, "pattern": "\\S"}
+        ]
+      },
+      "category": {"type": "string", "enum": ["NRA", "AAS", "ZHR"]},
+      "question": {"type": "string", "minLength": 1, "pattern": "\\S"},
+      "reference_answer": {"type": "string", "minLength": 1, "pattern": "\\S"},
+      "expected_keywords": {
+        "type": "array",
+        "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "uniqueItems": true,
+        "default": []
+      },
+      "forbidden_keywords": {
+        "type": "array",
+        "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "uniqueItems": true,
+        "default": []
+      },
+      "expected_symbols": {
+        "type": "array",
+        "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "uniqueItems": true,
+        "default": []
+      },
+      "symbol_aliases": {
+        "type": "object",
+        "propertyNames": {"minLength": 1, "pattern": "\\S"},
+        "additionalProperties": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "uniqueItems": true
+        },
+        "default": {}
+      },
+      "match_mode": {"type": "string", "enum": ["any", "all"], "default": "any"},
+      "symbol_match_mode": {"type": "string", "enum": ["any", "all"], "default": "all"},
+      "expected_regex": {"type": "string", "minLength": 1},
+      "semantic_threshold": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "default": 0.75
+      }
+    }
+  }
+}

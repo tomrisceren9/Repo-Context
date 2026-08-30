@@ -1,0 +1,11 @@
+[
+  {
+    "id": "nra-1",
+    "category": "NRA",
+    "question": "Hesaplamayı hangi sembol yapar?",
+    "reference_answer": "BillingService.calculate_total hesaplamayı yapar.",
+    "expected_keywords": ["hesaplamayı"],
+    "expected_symbols": ["BillingService.calculate_total"],
+    "match_mode": "all"
+  }
+]

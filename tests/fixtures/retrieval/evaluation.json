@@ -1,0 +1,10 @@
+[
+  {"query": "validateAccessToken", "file": "auth/service.py", "symbol": "AuthenticationService.validate_access_token"},
+  {"query": "invoice payable amount with tax", "file": "billing/invoice.py", "symbol": "calculate_invoice_total"},
+  {"query": "PaymentGateway.processPayment", "file": "payments/gateway.ts", "symbol": "PaymentGateway.processPayment"},
+  {"query": "load purchase order persistent identifier", "file": "orders/repository.py", "symbol": "OrderRepository.find_order_by_id"},
+  {"query": "LoadUserProfile", "file": "users/profile.go", "symbol": "LoadUserProfile"},
+  {"query": "deliver onboarding message new account", "file": "notifications/EmailSender.java", "symbol": "EmailSender.sendWelcomeEmail"},
+  {"query": "cart checkout analytics event", "file": "analytics/events.rs", "symbol": "record_checkout_event"},
+  {"query": "hold warehouse stock", "file": "inventory/stock.cs", "symbol": "StockManager.ReserveInventory"}
+]

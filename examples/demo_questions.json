@@ -1,0 +1,35 @@
+[
+  {
+    "id": "demo-nra-1",
+    "category": "NRA",
+    "question": "Kullanıcı kimliğini doğrulayan sembol hangisidir?",
+    "reference_answer": "Kullanıcı kimliği AuthService.verify_user metodu tarafından doğrulanır.",
+    "expected_keywords": ["doğrulanır"],
+    "expected_symbols": ["AuthService.verify_user"],
+    "symbol_aliases": {
+      "AuthService.verify_user": ["AuthService.verifyUser"]
+    },
+    "match_mode": "all",
+    "semantic_threshold": 0.8
+  },
+  {
+    "id": "demo-aas-1",
+    "category": "AAS",
+    "question": "Sipariş oluşturma akışının ana bileşenleri nelerdir?",
+    "reference_answer": "OrderController girdiyi alır, OrderService iş kurallarını uygular ve OrderRepository kalıcılığı sağlar.",
+    "expected_symbols": ["OrderController", "OrderService", "OrderRepository"],
+    "symbol_match_mode": "all",
+    "semantic_threshold": 0.75
+  },
+  {
+    "id": "demo-zhr-1",
+    "category": "ZHR",
+    "question": "Depoda QuantumPaymentGateway adlı bir sınıf var mı?",
+    "reference_answer": "Hayır, depoda QuantumPaymentGateway adlı bir sınıf yoktur.",
+    "expected_keywords": ["hayır", "yoktur"],
+    "expected_symbols": ["QuantumPaymentGateway"],
+    "match_mode": "any",
+    "forbidden_keywords": ["vardır"],
+    "semantic_threshold": 0.85
+  }
+]

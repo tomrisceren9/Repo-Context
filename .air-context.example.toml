@@ -1,0 +1,13 @@
+[scanner]
+# Noktasız uzantılar da kabul edilir ve otomatik normalize edilir.
+allowed_extensions = [
+  ".c", ".cc", ".cjs", ".cpp", ".cs", ".cts", ".go", ".h", ".hpp",
+  ".java", ".js", ".jsx", ".mjs", ".mts", ".py", ".rs", ".ts", ".tsx",
+]
+allowed_filenames = ["Dockerfile", "Makefile", "requirements.txt"]
+max_file_size = 1000000
+detect_binary = true
+include_hidden = false
+ignore_patterns = ["vendor/", "generated/", "**/*.min.js"]
+# Bu kalıplar `.gitignore` negation kurallarıyla geri açılamaz.
+deny_patterns = ["private/", "**/*.secret.json"]

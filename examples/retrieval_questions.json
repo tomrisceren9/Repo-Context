@@ -1,0 +1,26 @@
+[
+  {
+    "id": "auth-token-validation",
+    "query": "validate an access token",
+    "file": "auth/service.py",
+    "symbol": "AuthenticationService.validate_access_token",
+    "query_style": "natural_language",
+    "forbidden_identifiers": ["AuthenticationService", "validate_access_token"]
+  },
+  {
+    "id": "invoice-total",
+    "query": "calculate the payable invoice amount including tax",
+    "file": "billing/invoice.py",
+    "symbol": "calculate_invoice_total",
+    "query_style": "natural_language",
+    "forbidden_identifiers": ["calculate_invoice_total"]
+  },
+  {
+    "id": "order-lookup",
+    "query": "load a purchase order by its persistent identifier",
+    "file": "orders/repository.py",
+    "symbol": "OrderRepository.find_order_by_id",
+    "query_style": "natural_language",
+    "forbidden_identifiers": ["OrderRepository", "find_order_by_id"]
+  }
+]

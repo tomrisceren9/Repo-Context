@@ -1,0 +1,7 @@
+include .air-context.example.toml
+include src/air_context_engine/benchmarks/benchmark_questions.schema.json
+include examples/demo_questions.json
+include examples/retrieval_questions.json
+recursive-include tests/fixtures *
+global-exclude __pycache__ *.py[cod] .air_cache.json .air_cache.json.lock
+global-exclude .air_index.sqlite3 .air_index.sqlite3-* .air_index.sqlite3.lock
