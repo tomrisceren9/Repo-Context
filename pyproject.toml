@@ -47,7 +47,7 @@ benchmark = [
     "python-dotenv>=1.0.0,<2",
 ]
 semantic = [
-    "sentence-transformers>=3.0,<6",
+    "sentence-transformers>=3.0,<7",
 ]
 dev = [
     "coverage>=7.6,<8",
