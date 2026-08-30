@@ -54,7 +54,7 @@ dev = [
     "mypy>=1.15,<2",
     "pytest>=8,<9",
     "ruff>=0.12,<1",
-    "types-setuptools>=75,<82",
+    "types-setuptools>=75,<85",
 ]
 
 [project.scripts]
