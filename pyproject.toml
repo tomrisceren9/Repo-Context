@@ -52,7 +52,7 @@ semantic = [
 dev = [
     "coverage>=7.6,<8",
     "mypy>=1.15,<2",
-    "pytest>=8,<9",
+    "pytest>=8,<10",
     "ruff>=0.12,<1",
     "types-setuptools>=75,<82",
 ]
